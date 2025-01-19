@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryForge AI - Professional Story Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>StoryForge AI</span>
+            </div>
+            <a href="home.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <h1>Create Amazing Stories with AI</h1>
+        <p class="subtitle">Transform your ideas into captivating stories using advanced AI technology</p>
+    </div>
+
+    <div class="container">
+        <div class="story-form">
+            <div class="form-header">
+                <i class="fas fa-magic"></i>
+                <h2>Story Generator</h2>
+            </div>
+
+            <!-- Story Prompt -->
+            <div class="form-group">
+                <label for="storyPrompt">
+                    <i class="fas fa-pencil-alt"></i>
+                    Enter your story prompt:
+                </label>
+                <textarea id="storyPrompt" placeholder="Type your creative idea here..."></textarea>
+            </div>
+
+            <!-- Language Selection -->
+            <div class="form-group">
+                <label for="language">
+                    <i class="fas fa-language"></i>
+                    Select Language:
+                </label>
+                <select id="language" class="language-select">
+                    <option value="english">English</option>
+                    <option value="hindi">हिंदी</option>
+                    <option value="hinglish">Hinglish</option>
+                </select>
+            </div>
+
+            <!-- Genre Selection -->
+            <div class="form-group">
+                <label>
+                    <i class="fas fa-theater-masks"></i>
+                    Select Genre:
+                </label>
+                <div class="button-group">
+                    <button data-type="genre" data-value="adventure">
+                        <i class="fas fa-mountain"></i> Adventure
+                    </button>
+                    <button data-type="genre" data-value="romance">
+                        <i class="fas fa-heart"></i> Romance
+                    </button>
+                    <button data-type="genre" data-value="mystery">
+                        <i class="fas fa-magnifying-glass"></i> Mystery
+                    </button>
+                    <button data-type="genre" data-value="fantasy">
+                        <i class="fas fa-dragon"></i> Fantasy
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tone Selection -->
+            <div class="form-group">
+                <label>
+                    <i class="fas fa-music"></i>
+                    Select Tone:
+                </label>
+                <div class="button-group">
+                    <button data-type="tone" data-value="funny">
+                        <i class="fas fa-laugh"></i> Funny
+                    </button>
+                    <button data-type="tone" data-value="serious">
+                        <i class="fas fa-user-tie"></i> Serious
+                    </button>
+                    <button data-type="tone" data-value="dramatic">
+                        <i class="fas fa-theater-masks"></i> Dramatic
+                    </button>
+                    <button data-type="tone" data-value="mysterious">
+                        <i class="fas fa-question-circle"></i> Mysterious
+                    </button>
+                </div>
+            </div>
+
+            <!-- Length Selection -->
+            <div class="form-group">
+                <label>
+                    <i class="fas fa-text-width"></i>
+                    Select Length:
+                </label>
+                <div class="button-group">
+                    <button data-type="length" data-value="short">
+                        <i class="fas fa-file-alt"></i> Short
+                    </button>
+                    <button data-type="length" data-value="medium">
+                        <i class="fas fa-file-alt"></i> Medium
+                    </button>
+                    <button data-type="length" data-value="long">
+                        <i class="fas fa-file-alt"></i> Long
+                    </button>
+                </div>
+            </div>
+
+            <!-- Story Enhancements -->
+            
+                <div class="enhancement-options">
+                    <input type="hidden" id="addTitle" value="true">
+                    <input type="hidden" id="addMoral" value="true">
+                    <input type="hidden" id="generateImage" value="true">
+                </div>
+            </div>
+
+            <!-- Background Music -->
+            <div class="form-group">
+                <label>
+                    <i class="fas fa-music"></i>
+                    Background Music:
+                </label>
+                <select id="backgroundMusic" class="music-select">
+                    <option value="none">No Music</option>
+                    <option value="adventure">Adventure Theme</option>
+                    <option value="romantic">Romantic Melody</option>
+                    <option value="mystery">Mystery Soundtrack</option>
+                    <option value="fantasy">Fantasy Orchestra</option>
+                </select>
+            </div>
+
+            <!-- Generate Button -->
+            <button id="generateBtn" class="generate-btn">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                Generate Story
+            </button>
+        </div>
+        
+        <!-- Story Output Container -->
+        <div class="story-container">
+            <!-- Story content will be inserted here -->
+        </div>
+<!-- Story Controls -->
+<div class="story-controls">
+    <button class="control-btn" id="playBtn">Play</button>
+    <button class="control-btn" id="pauseBtn">Pause</button>
+    <button class="control-btn" id="stopBtn">Stop</button>
+</div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Created by UTSAV RAJ</p>
+            <p>Powered by Advanced AI Technology</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
